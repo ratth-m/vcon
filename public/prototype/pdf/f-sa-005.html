@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>F-SA-005 ใบรายละเอียดผลิตภัณฑ์</title>
+        <style>
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/THSarabunNew.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/THSarabunNew-Bold.ttf') format('truetype');
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 12mm 12mm;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'THSarabunNew', 'DejaVu Sans', sans-serif;
+            font-size: 14pt;
+            line-height: 0.95;
+            color: #000;
+            margin: 0;
+        }
+
+        table { border-collapse: collapse; width: 100%; }
+        td, th { vertical-align: middle; padding: 1px 3px; font-weight: normal; }
+
+        .grid td, .grid th { border: 0.7px solid #000; }
+        .grid th { text-align: center; }
+        .box { border: 1px solid #000; }
+        .box-thick { border: 1.5px solid #000; }
+        .no-border td, .no-border th { border: none; }
+
+        .title { font-size: 18pt; font-weight: bold; text-align: center; }
+        .bold { font-weight: bold; }
+        .normal { font-weight: normal; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .left { text-align: left; }
+        .small { font-size: 12.5pt; }
+        .large { font-size: 15.5pt; }
+        .xsmall { font-size: 10.5pt; }
+        .shade { background: #e6e6e6; }
+
+        /* เส้นประสำหรับกรอกข้อมูล */
+        .fill {
+            display: inline-block;
+            border-bottom: 0.8px dotted #000;
+            min-height: 14px;
+            padding: 0 2px;
+            vertical-align: bottom;
+            text-align: center;
+        }
+        .fill-left { text-align: left; }
+
+        /* บรรทัด label + ช่องกรอก: <table class="ln"><tr><td class="l">ชื่อ</td><td class="v">ค่า</td></tr></table> */
+        table.ln { width: 100%; border-collapse: collapse; }
+        table.ln td { padding: 0 2px; border: none; vertical-align: bottom; }
+        table.ln td.l { white-space: nowrap; width: 1%; padding-right: 3px; }
+        table.ln td.v { border-bottom: 0.8px dotted #000; }
+        table.ln td.vc { border-bottom: 0.8px dotted #000; text-align: center; }
+        table.ln td.gap { width: 8px; }
+        .line {
+            border-bottom: 0.8px dotted #000;
+            height: 6.8mm;
+            padding: 0 2px;
+            overflow: hidden;
+        }
+
+        /* checkbox */
+        .cb {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            font-family: 'DejaVu Sans', sans-serif;
+            font-size: 8px;
+            line-height: 9px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 3px 0 6px;
+        }
+
+        .form-code {
+            position: fixed;
+            bottom: -7mm;
+            right: 0;
+            text-align: right;
+            font-size: 13pt;
+            margin-top: 6px;
+        }
+        .page-break { page-break-after: always; }
+        .row-h td { height: 24px; padding-top: 0; padding-bottom: 0; }
+        .row-h td.fit { font-size: 12.5pt; }
+
+            .det td { padding: 1px 2px; vertical-align: bottom; }
+    .det td.vv { border-bottom: 0.8px dotted #000; }
+    .info td { padding: 1px 2px; vertical-align: bottom; }
+    .info td.vv { border-bottom: 0.8px dotted #000; }
+    </style>
+<style>
+    @media screen {
+        html { background: #6b6f76; }
+        body { margin: 0; padding: 16px 0 32px; }
+        .sheet { position: relative; width: 210mm; min-height: 297mm; padding: 10mm 12mm 12mm 12mm; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+        .sheet .form-code { position: absolute; bottom: 4mm; right: 12mm; }
+        .bar { width: 210mm; margin: 0 auto 10px; color: #fff; font-family: sans-serif; font-size: 14px; display: flex; justify-content: space-between; }
+        .bar a { color: #fff; }
+    }
+    @media print { .bar { display: none; } .sheet .form-code { position: fixed; } }
+    .page-break { display: none; }
+</style>
+</head>
+<body>
+<div class="bar"><span>F-SA-005 — ใบรายละเอียดผลิตภัณฑ์</span><a href="index.html">← รายการฟอร์มทั้งหมด</a></div>
+<div class="sheet">
+
+
+<div style="border:1.5px solid #000; padding:2px 6px;">
+    <table>
+        <tr>
+            <td style="width:25%;"></td>
+            <td class="title" style="width:50%;">ใบรายละเอียดผลิตภัณฑ์</td>
+            <td class="right bold large" style="width:25%;">หน้าที่ 1</td>
+        </tr>
+    </table>
+    <table class="info" style="margin-top:6px;">
+        <tr>
+            <td class="bold large" style="width:55%;">บริษัท วงศ์ชัย จำกัด</td>
+            <td class="bold large" style="width:22%;">โรงงาน วงศ์ชัย :</td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1.5px solid #000; border-top:none; padding:2px 6px 6px 6px;">
+    <table class="info">
+        <tr>
+            <td style="width:23%;"><span class="cb">&nbsp;</span>
+ สัญญา</td>
+            <td style="width:30%;"><span class="cb">&nbsp;</span>
+ เอกสารยืนยันการสั่งซื้อ</td>
+            <td style="width:7%;">เลขที่</td>
+            <td class="vv" style="width:14%;"></td>
+            <td style="width:9%;">&nbsp;ลงวันที่</td>
+            <td class="vv"></td>
+        </tr>
+    </table>
+    <table class="info">
+        <tr>
+            <td style="width:16%;">ชื่อลูกค้า</td><td class="vv" style="width:30%;"></td>
+            <td style="width:12%;">&nbsp;โครงการ</td><td class="vv"></td>
+        </tr>
+        <tr>
+            <td>ผู้ติดต่อ</td><td class="vv"></td>
+            <td>&nbsp;โทรศัพท์</td><td class="vv"></td>
+        </tr>
+        <tr>
+            <td>แผนการใช้</td><td class="vv" colspan="3"></td>
+        </tr>
+    </table>
+    <table class="info">
+        <tr>
+            <td style="width:16%;">เอกสารประกอบ</td>
+            <td style="width:22%;"><span class="cb">&nbsp;</span>
+ สัญญา / เสนอราคา</td>
+            <td style="width:27%;"><span class="cb">&nbsp;</span>
+ ใบประเมินขนส่ง / ติดตั้ง</td>
+            <td style="width:12%;"><span class="cb">&nbsp;</span>
+ แผนที่</td>
+            <td style="width:11%;"><span class="cb">&nbsp;</span>
+ แบบ</td>
+            <td><span class="cb">&nbsp;</span>
+ อื่นๆ</td>
+        </tr>
+    </table>
+    <div class="bold">ข้อตกลงกับผู้ซื้อ</div>
+    <table class="info">
+        <tr><td style="width:16%;">ขนส่งโดย</td><td><span class="cb">&nbsp;</span>
+ บริษัท</td></tr>
+        <tr><td></td><td><span class="cb">&nbsp;</span>
+ ลูกค้า</td></tr>
+        <tr><td>ติดตั้งโดย</td><td><span class="cb">&nbsp;</span>
+ บริษัท</td></tr>
+        <tr><td></td><td><span class="cb">&nbsp;</span>
+ ลูกค้า</td></tr>
+        <tr><td></td><td><span class="cb">&nbsp;</span>
+ อื่นๆ</td></tr>
+    </table>
+    <table class="info" style="margin-top:4px;">
+        <tr><td style="width:16%;">วางบิล - รับเช็ค</td><td class="vv"></td></tr>
+    </table>
+    <table class="info" style="margin-top:4px;">
+        <tr>
+            <td style="width:11%;">ผู้แทนขาย</td><td class="vv" style="width:20%;"></td>
+            <td style="width:10%;">&nbsp;ผู้จัดการ</td><td class="vv" style="width:20%;"></td>
+            <td style="width:17%;">&nbsp;ผู้จัดการปฏิบัติการ</td><td class="vv"></td>
+        </tr>
+    </table>
+</div>
+<div class="bold center large" style="border:1.5px solid #000; border-top:none; padding:2px;">รายละเอียด</div>
+    <div style="border:1px solid #000; border-top:none; padding:6px 6px 2px 6px; height:44mm;">
+    <table class="det">
+        <tr>
+            <td style="width:22%;">Span</td>
+            <td class="vv" style="width:16%;"></td>
+            <td style="width:8%;">m.</td>
+            <td style="width:13%;">ผลิตภัณฑ์</td>
+            <td class="vv" style="width:13%;"></td>
+            <td style="width:11%;">Topping</td>
+            <td class="vv" style="width:9%;"></td>
+            <td style="width:8%;">cm.</td>
+        </tr>
+        <tr>
+            <td>Clear Span</td>
+            <td class="vv"></td>
+            <td>m.</td>
+            <td>Load</td>
+            <td class="vv" colspan="3"></td>
+            <td>kg./m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>ความกว้างของผลิตภัณฑ์</td>
+            <td class="vv"></td>
+            <td>cm.</td>
+            <td>เสริมลวด</td>
+            <td class="vv" colspan="4"></td>
+        </tr>
+        <tr>
+            <td>พื้นที่</td>
+            <td class="vv" colspan="7"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">อื่นๆ</td>
+            <td colspan="7" style="white-space:pre-line; vertical-align:top;"></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+    <table class="det"><tr>
+        <td style="width:70%;"></td>
+        <td class="bold" style="width:8%;">รหัส</td>
+        <td class="vv"></td>
+    </tr></table>
+</div>
+    <div style="border:1px solid #000; border-top:none; padding:6px 6px 2px 6px; height:44mm;">
+    <table class="det">
+        <tr>
+            <td style="width:22%;">Span</td>
+            <td class="vv" style="width:16%;"></td>
+            <td style="width:8%;">m.</td>
+            <td style="width:13%;">ผลิตภัณฑ์</td>
+            <td class="vv" style="width:13%;"></td>
+            <td style="width:11%;">Topping</td>
+            <td class="vv" style="width:9%;"></td>
+            <td style="width:8%;">cm.</td>
+        </tr>
+        <tr>
+            <td>Clear Span</td>
+            <td class="vv"></td>
+            <td>m.</td>
+            <td>Load</td>
+            <td class="vv" colspan="3"></td>
+            <td>kg./m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>ความกว้างของผลิตภัณฑ์</td>
+            <td class="vv"></td>
+            <td>cm.</td>
+            <td>เสริมลวด</td>
+            <td class="vv" colspan="4"></td>
+        </tr>
+        <tr>
+            <td>พื้นที่</td>
+            <td class="vv" colspan="7"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">อื่นๆ</td>
+            <td colspan="7" style="white-space:pre-line; vertical-align:top;"></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+    <table class="det"><tr>
+        <td style="width:70%;"></td>
+        <td class="bold" style="width:8%;">รหัส</td>
+        <td class="vv"></td>
+    </tr></table>
+</div>
+<div style="margin-top:4px;"><span class="bold">หมายเหตุ</span> &nbsp;ในกรณีที่ความยาว Clear Span ยาวกว่าที่ระบุไว้ในรายละเอียด ให้แจ้งมายังฝ่ายขายสำนักงานใหญ่ เพื่อแก้ไขและจัดทำรายละเอียดเพิ่มเติมลงไปใหม่ <span class="bold">ห้าม : ทำรายละเอียดเองโดยเด็ดขาด</span></div>
+
+
+    <div class="form-code">F-SA-005 ฉบับที่ : 4</div></div>
+<div class="page-break" style="display:block;height:0;page-break-after:always;"></div>
+<div class="sheet">
+    <div style="border:1px solid #000; padding:0 6px;">
+        <table>
+            <tr>
+                <td style="width:25%;"></td>
+                <td class="bold center large" style="width:50%;">ใบรายละเอียดผลิตภัณฑ์</td>
+                <td class="right bold large" style="width:25%;">หน้า 2</td>
+            </tr>
+        </table>
+        <table class="info">
+            <tr>
+                <td class="bold" style="width:55%;">บริษัท วงศ์ชัย จำกัด</td>
+                <td class="bold" style="width:20%;">โรงงาน วงศ์ชัย :</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+        <table class="info">
+            <tr>
+                <td style="width:12%;">ชื่อลูกค้า</td><td class="vv" style="width:30%;"></td>
+                <td style="width:10%;">&nbsp;โครงการ</td><td class="vv" colspan="3"></td>
+            </tr>
+            <tr>
+                <td>ผู้แทนขาย</td><td class="vv"></td>
+                <td colspan="4" style="padding:0;">
+                    <table class="info"><tr>
+                        <td style="width:24%;">&nbsp;ผู้จัดการฝ่ายขาย</td><td class="vv" style="width:26%;"></td>
+                        <td style="width:26%;">&nbsp;ผู้จัดการปฏิบัติการ</td><td class="vv"></td>
+                    </tr></table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="bold center" style="border:1px solid #000; border-top:none; padding:1px;">รายละเอียด</div>
+            <div style="border:1px solid #000; border-top:none; padding:6px 6px 2px 6px; height:56mm;">
+    <table class="det">
+        <tr>
+            <td style="width:22%;">Span</td>
+            <td class="vv" style="width:16%;"></td>
+            <td style="width:8%;">m.</td>
+            <td style="width:13%;">ผลิตภัณฑ์</td>
+            <td class="vv" style="width:13%;"></td>
+            <td style="width:11%;">Topping</td>
+            <td class="vv" style="width:9%;"></td>
+            <td style="width:8%;">cm.</td>
+        </tr>
+        <tr>
+            <td>Clear Span</td>
+            <td class="vv"></td>
+            <td>m.</td>
+            <td>Load</td>
+            <td class="vv" colspan="3"></td>
+            <td>kg./m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>ความกว้างของผลิตภัณฑ์</td>
+            <td class="vv"></td>
+            <td>cm.</td>
+            <td>เสริมลวด</td>
+            <td class="vv" colspan="4"></td>
+        </tr>
+        <tr>
+            <td>พื้นที่</td>
+            <td class="vv" colspan="7"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">อื่นๆ</td>
+            <td colspan="7" style="white-space:pre-line; vertical-align:top;"></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+    <table class="det"><tr>
+        <td style="width:70%;"></td>
+        <td class="bold" style="width:8%;">รหัส</td>
+        <td class="vv"></td>
+    </tr></table>
+</div>
+            <div style="border:1px solid #000; border-top:none; padding:6px 6px 2px 6px; height:56mm;">
+    <table class="det">
+        <tr>
+            <td style="width:22%;">Span</td>
+            <td class="vv" style="width:16%;"></td>
+            <td style="width:8%;">m.</td>
+            <td style="width:13%;">ผลิตภัณฑ์</td>
+            <td class="vv" style="width:13%;"></td>
+            <td style="width:11%;">Topping</td>
+            <td class="vv" style="width:9%;"></td>
+            <td style="width:8%;">cm.</td>
+        </tr>
+        <tr>
+            <td>Clear Span</td>
+            <td class="vv"></td>
+            <td>m.</td>
+            <td>Load</td>
+            <td class="vv" colspan="3"></td>
+            <td>kg./m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>ความกว้างของผลิตภัณฑ์</td>
+            <td class="vv"></td>
+            <td>cm.</td>
+            <td>เสริมลวด</td>
+            <td class="vv" colspan="4"></td>
+        </tr>
+        <tr>
+            <td>พื้นที่</td>
+            <td class="vv" colspan="7"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">อื่นๆ</td>
+            <td colspan="7" style="white-space:pre-line; vertical-align:top;"></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+    <table class="det"><tr>
+        <td style="width:70%;"></td>
+        <td class="bold" style="width:8%;">รหัส</td>
+        <td class="vv"></td>
+    </tr></table>
+</div>
+            <div style="border:1px solid #000; border-top:none; padding:6px 6px 2px 6px; height:56mm;">
+    <table class="det">
+        <tr>
+            <td style="width:22%;">Span</td>
+            <td class="vv" style="width:16%;"></td>
+            <td style="width:8%;">m.</td>
+            <td style="width:13%;">ผลิตภัณฑ์</td>
+            <td class="vv" style="width:13%;"></td>
+            <td style="width:11%;">Topping</td>
+            <td class="vv" style="width:9%;"></td>
+            <td style="width:8%;">cm.</td>
+        </tr>
+        <tr>
+            <td>Clear Span</td>
+            <td class="vv"></td>
+            <td>m.</td>
+            <td>Load</td>
+            <td class="vv" colspan="3"></td>
+            <td>kg./m<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>ความกว้างของผลิตภัณฑ์</td>
+            <td class="vv"></td>
+            <td>cm.</td>
+            <td>เสริมลวด</td>
+            <td class="vv" colspan="4"></td>
+        </tr>
+        <tr>
+            <td>พื้นที่</td>
+            <td class="vv" colspan="7"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;">อื่นๆ</td>
+            <td colspan="7" style="white-space:pre-line; vertical-align:top;"></td>
+        </tr>
+    </table>
+</div>
+<div style="border:1px solid #000; border-top:none; padding:0 6px 2px 6px;">
+    <table class="det"><tr>
+        <td style="width:70%;"></td>
+        <td class="bold" style="width:8%;">รหัส</td>
+        <td class="vv"></td>
+    </tr></table>
+</div>
+        <div class="small" style="margin-top:2px;"><span class="bold">หมายเหตุ :</span> ในกรณีที่ความยาว Clear Span ยาวกว่าที่ระบุไว้ในรายละเอียด ให้แจ้งมายังฝ่ายขายสำนักงานใหญ่ เพื่อแก้ไขและจัดทำรายละเอียดเพิ่มเติมลงไปใหม่ <span class="bold">ห้าม ! ทำรายละเอียดเองโดยเด็ดขาด</span></div>
+<div class="form-code">F-SA-005 ฉบับที่ : 4</div></div>
+</body>
+</html>

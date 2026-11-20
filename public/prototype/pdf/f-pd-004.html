@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>F-PD-004 แผนงานการส่งมอบและวางแผนการผลิต</title>
+        <style>
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/THSarabunNew.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/THSarabunNew-Bold.ttf') format('truetype');
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 8mm 8mm 8mm 8mm;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'THSarabunNew', 'DejaVu Sans', sans-serif;
+            font-size: 11.5pt;
+            line-height: 0.95;
+            color: #000;
+            margin: 0;
+        }
+
+        table { border-collapse: collapse; width: 100%; }
+        td, th { vertical-align: middle; padding: 1px 3px; font-weight: normal; }
+
+        .grid td, .grid th { border: 0.7px solid #000; }
+        .grid th { text-align: center; }
+        .box { border: 1px solid #000; }
+        .box-thick { border: 1.5px solid #000; }
+        .no-border td, .no-border th { border: none; }
+
+        .title { font-size: 15.5pt; font-weight: bold; text-align: center; }
+        .bold { font-weight: bold; }
+        .normal { font-weight: normal; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .left { text-align: left; }
+        .small { font-size: 10pt; }
+        .large { font-size: 13pt; }
+        .xsmall { font-size: 8pt; }
+        .shade { background: #e6e6e6; }
+
+        /* เส้นประสำหรับกรอกข้อมูล */
+        .fill {
+            display: inline-block;
+            border-bottom: 0.8px dotted #000;
+            min-height: 14px;
+            padding: 0 2px;
+            vertical-align: bottom;
+            text-align: center;
+        }
+        .fill-left { text-align: left; }
+
+        /* บรรทัด label + ช่องกรอก: <table class="ln"><tr><td class="l">ชื่อ</td><td class="v">ค่า</td></tr></table> */
+        table.ln { width: 100%; border-collapse: collapse; }
+        table.ln td { padding: 0 2px; border: none; vertical-align: bottom; }
+        table.ln td.l { white-space: nowrap; width: 1%; padding-right: 3px; }
+        table.ln td.v { border-bottom: 0.8px dotted #000; }
+        table.ln td.vc { border-bottom: 0.8px dotted #000; text-align: center; }
+        table.ln td.gap { width: 8px; }
+        .line {
+            border-bottom: 0.8px dotted #000;
+            height: 6.8mm;
+            padding: 0 2px;
+            overflow: hidden;
+        }
+
+        /* checkbox */
+        .cb {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            font-family: 'DejaVu Sans', sans-serif;
+            font-size: 8px;
+            line-height: 9px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 3px 0 6px;
+        }
+
+        .form-code {
+            position: fixed;
+            bottom: -7mm;
+            right: 0;
+            text-align: right;
+            font-size: 13pt;
+            margin-top: 6px;
+        }
+        .page-break { page-break-after: always; }
+        .row-h td { height: 17px; padding-top: 0; padding-bottom: 0; }
+        .row-h td.fit { font-size: 10pt; }
+
+            .day { width: 13px; padding: 0; text-align: center; }
+    .sign td { vertical-align: top; }
+    thead th { white-space: nowrap; }
+    .sign td.l { width: 1%; }
+    </style>
+<style>
+    @media screen {
+        html { background: #6b6f76; }
+        body { margin: 0; padding: 16px 0 32px; }
+        .sheet { position: relative; width: 297mm; min-height: 210mm; padding: 8mm; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+        .sheet .form-code { position: absolute; bottom: 4mm; right: 12mm; }
+        .bar { width: 297mm; margin: 0 auto 10px; color: #fff; font-family: sans-serif; font-size: 14px; display: flex; justify-content: space-between; }
+        .bar a { color: #fff; }
+    }
+    @media print { .bar { display: none; } .sheet .form-code { position: fixed; } }
+    .page-break { display: none; }
+</style>
+</head>
+<body>
+<div class="bar"><span>F-PD-004 — แผนงานการส่งมอบและวางแผนการผลิตผลิตภัณฑ์ประจำสัปดาห์</span><a href="index.html">← รายการฟอร์มทั้งหมด</a></div>
+<div class="sheet">
+
+<div class="center bold large">แผนงานการส่งมอบและวางแผนการผลิตผลิตภัณฑ์ประจำสัปดาห์</div>
+<div class="center bold">SCHEDULE FOR DELIVERY AND PRODUCTION PLANING OF HOLLOW CORE SLAB</div>
+
+<table class="grid" style="border:1.2px solid #000; margin-top:3px;">
+    <thead>
+        <tr>
+            <td colspan="44" style="border-bottom:none;">
+                <table class="ln">
+                    <tr>
+                        <td class="l bold">บริษัท วงศ์ชัย จำกัด &nbsp; สาขา</td>
+                        <td class="v" style="width:18%;"></td>
+                        <td class="l bold">&nbsp; โรงผลิต</td>
+                        <td class="v" style="width:18%;"></td>
+                        <td style="width:20%;"></td>
+                        <td class="l bold"><span class="cb">&nbsp;</span>
+ แผนการส่งมอบ</td>
+                        <td class="l bold"><span class="cb">&nbsp;</span>
+ แผนการผลิต</td>
+                        <td style="width:10%;"></td>
+                        <td class="l bold">หน้าที่ &nbsp; 1 / 1</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="3" style="width:3%;" class="bold">ลำดับ</th>
+            <th rowspan="3" style="width:14%;" class="bold">ชื่อโครงการ</th>
+            <th rowspan="2" style="width:5%; border-bottom:none;" class="bold">Production</th>
+            <th rowspan="2" style="width:3%; border-bottom:none;" class="bold">หนา</th>
+            <th rowspan="2" style="width:6%; border-bottom:none;" class="bold">ลวด</th>
+            <th rowspan="2" style="width:5%; border-bottom:none;" class="bold">LL + SDL</th>
+            <th rowspan="2" style="width:5%; border-bottom:none;" class="bold">พื้นที่</th>
+            <th rowspan="2" style="width:5%; text-align:left; border-bottom:none;" class="bold"><span class="cb">&nbsp;</span>
+โซน/ชั้น</th>
+            <th colspan="35" class="bold" style="text-align:left;">
+                ระยะเวลาที่แผนควบคุมตั้งแต่ วันที่ &nbsp;  &nbsp; 
+                &nbsp;&nbsp; ถึง &nbsp;  &nbsp; เดือน &nbsp; 
+                &nbsp;&nbsp; ค.ศ. &nbsp; -
+                &nbsp;&nbsp;&nbsp;&nbsp; เปลี่ยนแปลงครั้งที่ : 
+            </th>
+            <th rowspan="3" style="width:7%;" class="bold">หมายเหตุ</th>
+        </tr>
+        <tr>
+                            <th class="day bold ">ศ</th>
+                            <th class="day bold ">ส</th>
+                            <th class="day bold shade">อา</th>
+                            <th class="day bold ">จ</th>
+                            <th class="day bold ">อ</th>
+                            <th class="day bold ">พ</th>
+                            <th class="day bold ">พฤ</th>
+                            <th class="day bold ">ศ</th>
+                            <th class="day bold ">ส</th>
+                            <th class="day bold shade">อา</th>
+                            <th class="day bold ">จ</th>
+                            <th class="day bold ">อ</th>
+                            <th class="day bold ">พ</th>
+                            <th class="day bold ">พฤ</th>
+                            <th class="day bold ">ศ</th>
+                            <th class="day bold ">ส</th>
+                            <th class="day bold shade">อา</th>
+                            <th class="day bold ">จ</th>
+                            <th class="day bold ">อ</th>
+                            <th class="day bold ">พ</th>
+                            <th class="day bold ">พฤ</th>
+                            <th class="day bold ">ศ</th>
+                            <th class="day bold ">ส</th>
+                            <th class="day bold shade">อา</th>
+                            <th class="day bold ">จ</th>
+                            <th class="day bold ">อ</th>
+                            <th class="day bold ">พ</th>
+                            <th class="day bold ">พฤ</th>
+                            <th class="day bold ">ศ</th>
+                            <th class="day bold ">ส</th>
+                            <th class="day bold shade">อา</th>
+                            <th class="day bold ">จ</th>
+                            <th class="day bold ">อ</th>
+                            <th class="day bold ">พ</th>
+                            <th class="day bold ">พฤ</th>
+                    </tr>
+        <tr>
+            <th class="bold" style="border-top:none;">No.</th>
+            <th class="bold" style="border-top:none;">(cm.)</th>
+            <th class="bold" style="border-top:none;">(inch / mm.)</th>
+            <th class="bold" style="border-top:none;">(kg./sq.m.)</th>
+            <th class="bold" style="border-top:none;">(sq.m.)</th>
+            <th class="bold" style="text-align:left; border-top:none;"><span class="cb">&nbsp;</span>
+เลน</th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day shade"></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day shade"></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day shade"></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day shade"></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day shade"></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                            <th class="day "></th>
+                    </tr>
+    </thead>
+    <tbody>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+                    <tr class="row-h">
+                <td class="center"></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day shade"></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                    <td class="day "></td>
+                                <td></td>
+            </tr>
+            </tbody>
+</table>
+
+<table class="sign" style="border:1.2px solid #000; border-top:none;">
+    <tr>
+        <td style="width:34%; border-right:0.7px solid #000; padding:8px 8px 4px 8px;">
+            <table class="ln"><tr><td class="l bold">ผู้จัดทำ :</td><td class="vc"></td><td class="gap"></td><td class="l" style="width:22mm;"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding-left:30mm; margin-top:4px;">
+                <div><span class="cb">&nbsp;</span>
+ หัวหน้าส่วนปฏิบัติการสนาม</div>
+                <div><span class="cb">&nbsp;</span>
+ หัวหน้าแผนกปฏิบัติการโรงงาน</div>
+            </div>
+        </td>
+        <td style="width:33%; border-right:0.7px solid #000; padding:8px 8px 4px 8px;">
+            <table class="ln"><tr><td class="l bold">ผู้ตรวจสอบ</td><td class="vc"></td><td class="gap"></td><td class="l" style="width:22mm;"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding-left:25mm; margin-top:4px;">
+                <div><span class="cb">&nbsp;</span>
+ หัวหน้าแผนกปฏิบัติการสนาม</div>
+            </div>
+        </td>
+        <td style="width:33%; padding:8px 8px 4px 8px;">
+            <table class="ln"><tr><td class="l bold">ผู้อนุมัติ :</td><td class="vc"></td><td class="gap"></td><td class="l" style="width:22mm;"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding-left:30mm; margin-top:4px;">
+                <div><span class="cb">&nbsp;</span>
+ ผู้จัดการฝ่ายปฏิบัติการสนาม</div>
+                <div><span class="cb">&nbsp;</span>
+ ผู้จัดการฝ่ายโรงงาน</div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="form-code">F-PD-004 ฉบับที่ 3</div></div>
+</body>
+</html>

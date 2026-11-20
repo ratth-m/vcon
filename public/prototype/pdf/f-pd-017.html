@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>F-PD-017 ใบประเมินผลการปฏิบัติงาน</title>
+        <style>
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/THSarabunNew.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/THSarabunNew-Bold.ttf') format('truetype');
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 12mm 12mm;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'THSarabunNew', 'DejaVu Sans', sans-serif;
+            font-size: 13.5pt;
+            line-height: 0.95;
+            color: #000;
+            margin: 0;
+        }
+
+        table { border-collapse: collapse; width: 100%; }
+        td, th { vertical-align: middle; padding: 1px 3px; font-weight: normal; }
+
+        .grid td, .grid th { border: 0.7px solid #000; }
+        .grid th { text-align: center; }
+        .box { border: 1px solid #000; }
+        .box-thick { border: 1.5px solid #000; }
+        .no-border td, .no-border th { border: none; }
+
+        .title { font-size: 17.5pt; font-weight: bold; text-align: center; }
+        .bold { font-weight: bold; }
+        .normal { font-weight: normal; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .left { text-align: left; }
+        .small { font-size: 12pt; }
+        .large { font-size: 15pt; }
+        .xsmall { font-size: 10pt; }
+        .shade { background: #e6e6e6; }
+
+        /* เส้นประสำหรับกรอกข้อมูล */
+        .fill {
+            display: inline-block;
+            border-bottom: 0.8px dotted #000;
+            min-height: 14px;
+            padding: 0 2px;
+            vertical-align: bottom;
+            text-align: center;
+        }
+        .fill-left { text-align: left; }
+
+        /* บรรทัด label + ช่องกรอก: <table class="ln"><tr><td class="l">ชื่อ</td><td class="v">ค่า</td></tr></table> */
+        table.ln { width: 100%; border-collapse: collapse; }
+        table.ln td { padding: 0 2px; border: none; vertical-align: bottom; }
+        table.ln td.l { white-space: nowrap; width: 1%; padding-right: 3px; }
+        table.ln td.v { border-bottom: 0.8px dotted #000; }
+        table.ln td.vc { border-bottom: 0.8px dotted #000; text-align: center; }
+        table.ln td.gap { width: 8px; }
+        .line {
+            border-bottom: 0.8px dotted #000;
+            height: 5.6mm;
+            padding: 0 2px;
+            overflow: hidden;
+        }
+
+        /* checkbox */
+        .cb {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            font-family: 'DejaVu Sans', sans-serif;
+            font-size: 8px;
+            line-height: 9px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 3px 0 6px;
+        }
+
+        .form-code {
+            position: fixed;
+            bottom: -7mm;
+            right: 0;
+            text-align: right;
+            font-size: 13pt;
+            margin-top: 6px;
+        }
+        .page-break { page-break-after: always; }
+        .row-h td { height: 21px; padding-top: 0; padding-bottom: 0; }
+        .row-h td.fit { font-size: 12pt; }
+
+            .circ { font-family: 'DejaVu Sans', sans-serif; font-size: 9pt; }
+    .main th { font-size: 11.5pt; padding: 0 1px; }
+    .main td { text-align: center; }
+    .vtext { white-space: nowrap; }
+    </style>
+<style>
+    @media screen {
+        html { background: #6b6f76; }
+        body { margin: 0; padding: 16px 0 32px; }
+        .sheet { position: relative; width: 210mm; min-height: 297mm; padding: 10mm 12mm 12mm 12mm; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+        .sheet .form-code { position: absolute; bottom: 4mm; right: 12mm; }
+        .bar { width: 210mm; margin: 0 auto 10px; color: #fff; font-family: sans-serif; font-size: 14px; display: flex; justify-content: space-between; }
+        .bar a { color: #fff; }
+    }
+    @media print { .bar { display: none; } .sheet .form-code { position: fixed; } }
+    .page-break { display: none; }
+</style>
+</head>
+<body>
+<div class="bar"><span>F-PD-017 — ใบประเมินผลการปฏิบัติงาน</span><a href="index.html">← รายการฟอร์มทั้งหมด</a></div>
+<div class="sheet">
+
+
+<table style="border:1px solid #000;">
+    <tr><td colspan="2" class="title" style="padding-top:4px;">ใบประเมินผลการปฏิบัติงาน</td></tr>
+    <tr>
+        <td style="padding-left:8px;">บริษัท วงศ์ชัย จำกัด</td>
+        <td class="right" style="padding-right:8px;">วันที่ : <span style="white-space: nowrap;">......../......../........</span>
+</td>
+    </tr>
+</table>
+<div style="border:1px solid #000; border-top:none; padding:6px 8px 4px 8px;">
+    <table class="ln"><tr>
+        <td class="l">สัญญาเลขที่ :</td><td class="vc" style="width:40mm;"></td>
+        <td style="width:30mm;"></td>
+        <td class="l">หน่วยงาน</td>
+        <td class="l"><span class="cb">&nbsp;</span>
+ สามพราน</td>
+        <td class="l"><span class="cb">&nbsp;</span>
+ ลำลูกกา</td>
+        <td class="l"><span class="cb">&nbsp;</span>
+ บ้านบึง</td>
+    </tr></table>
+    <table class="ln"><tr>
+        <td class="l">โครงการ &nbsp;&nbsp;:</td><td class="v" style="width:45%;"></td>
+        <td class="l">&nbsp; ที่ตั้ง :</td><td class="v"></td>
+    </tr></table>
+    <table class="ln"><tr>
+        <td class="l">หัวหน้าส่วนปฏิบัติการสนาม :</td><td class="vc"></td>
+        <td class="l">&nbsp; หัวหน้าแผนกปฏิบัติการสนาม :</td><td class="vc"></td>
+        <td class="l">&nbsp; ผู้แทนขาย :</td><td class="vc"></td>
+    </tr></table>
+</div>
+
+<table class="grid main" style="border:1px solid #000; border-top:none;">
+    <tr>
+        <th rowspan="2" style="width:4%;">ลำ<br>ดับ</th>
+        <th colspan="3">รายการ</th>
+        <th rowspan="2" style="width:7%;">ยอดสั่ง<br>(ม<sup>2</sup>)<br><span class="circ">&#9312;</span></th>
+        <th colspan="5">การผลิต</th>
+        <th colspan="4">ขนส่ง</th>
+        <th rowspan="2" style="width:6%;">ส่งงาน<br><span class="circ">&#9317;</span></th>
+    </tr>
+    <tr>
+        <th style="width:6%;">ชนิด</th>
+        <th style="width:6%;">ลวด</th>
+        <th style="width:7%;">ยาว</th>
+        <th style="width:6%;">ในเลน<br><span class="circ">&#9313;</span></th>
+        <th style="width:6%;">ดัดแปลง<br><span class="circ">&#9314;</span></th>
+        <th style="width:6%;">ชำรุด<br>ผลิต</th>
+        <th style="width:6%;">ชำรุด<br>Stock</th>
+        <th style="width:7%;"><span class="circ">&#9313;</span>+<span class="circ">&#9314;</span><br>รวม(ม<sup>2</sup>)<br><span class="circ">&#9315;</span></th>
+        <th style="width:6%;">ขนส่ง<br><span class="circ">&#9316;</span></th>
+        <th style="width:6%;">ชำรุด<br>ขนส่ง</th>
+        <th style="width:6%;">ชำรุด<br>ติดตั้ง</th>
+        <th style="width:7%;">ชำรุด<br>stock<br>หน้างาน</th>
+    </tr>
+            <tr class="row-h">
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+            <tr class="row-h">
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+            <tr class="row-h">
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+            <tr class="row-h">
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+            <tr class="row-h">
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+            <tr class="row-h">
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+        <tr class="row-h">
+        <td colspan="4" style="border-left:none; border-bottom:none; text-align:right;">ยอดรวม</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>
+    <tr class="row-h">
+        <td colspan="7" style="border:none; text-align:right; padding-right:8px;">ยอดชำรุดต่างๆ คิดจากยอดส่งงาน</td>
+                    <td style="text-align:right;"> %</td>
+                    <td style="text-align:right;"> %</td>
+                <td colspan="2" style="border-top:none; border-bottom:none;"></td>
+                    <td style="text-align:right;"> %</td>
+                    <td style="text-align:right;"> %</td>
+                    <td style="text-align:right;"> %</td>
+                <td style="border:none;"></td>
+    </tr>
+</table>
+
+<table class="ln" style="width:auto; margin:8px auto 10px auto;"><tr>
+    <td class="l">แผ่นเผื่อจำนวน</td><td class="vc" style="width:18mm;"></td><td class="l">ม<sup>2</sup> &nbsp;คิดเป็น</td>
+    <td class="vc" style="width:12mm;"></td><td class="l">% &nbsp;ใช้งาน</td>
+    <td class="vc" style="width:18mm;"></td><td class="l">ม<sup>2</sup></td>
+    <td class="vc" style="width:14mm;"></td><td class="l">% &nbsp;ส่งกลับ</td>
+    <td class="vc" style="width:18mm;"></td><td class="l">ม<sup>2</sup></td>
+    <td class="vc" style="width:14mm;"></td><td class="l">%</td>
+</tr></table>
+
+<table class="grid" style="border:1px solid #000;">
+    <tr>
+        <th rowspan="2" style="width:28%;">อัตราส่วน</th>
+        <th colspan="4">แยกชนิดผลิตภัณฑ์</th>
+        <th rowspan="2" style="width:16%;">รวมทุกชนิด</th>
+    </tr>
+    <tr>
+                    <th style="width:14%; height:20px;"></th>
+                    <th style="width:14%; height:20px;"></th>
+                    <th style="width:14%; height:20px;"></th>
+                    <th style="width:14%; height:20px;"></th>
+            </tr>
+            <tr class="row-h">
+            <td>1. ยอดสั่ง<span class="circ">&#9312;</span>/ยอดส่งงาน<span class="circ">&#9317;</span></td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                    </tr>
+            <tr class="row-h">
+            <td>2.ยอดผลิต<span class="circ">&#9315;</span>/ยอดส่งงาน<span class="circ">&#9317;</span></td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                    </tr>
+            <tr class="row-h">
+            <td>3. ยอดขนส่ง<span class="circ">&#9316;</span> /ยอดส่งงาน<span class="circ">&#9317;</span></td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                            <td class="right"> %</td>
+                    </tr>
+    </table>
+
+<div class="bold" style="margin:10px 0 2px 12mm;">ข้อมูลงานขนส่งและติดตั้ง</div>
+<table class="grid" style="border:1px solid #000;">
+    <tr>
+        <th style="width:36%;">รายละเอียด</th>
+        <th style="width:16%;">ยอดประเมิน<br><span class="circ">&#9312;</span></th>
+        <th style="width:16%;">ยอดใช้จริง<br><span class="circ">&#9313;</span></th>
+        <th style="width:16%;">ผลต่าง<br><span class="circ">&#9313;</span>-<span class="circ">&#9312;</span></th>
+        <th style="width:16%;">คิดเป็น<br><span class="circ">&#9314;</span>/<span class="circ">&#9312;</span> (%)</th>
+    </tr>
+            <tr class="row-h">
+            <td>1. จำนวนรถขนส่ง &nbsp;&nbsp; (เที่ยว)</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                    </tr>
+            <tr class="row-h">
+            <td>2. จำนวนเครนที่ใช้ยก (ครั้ง)</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                    </tr>
+            <tr class="row-h">
+            <td>3. จำนวนรถแต็กที่ใช้ &nbsp;(ครั้ง)</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                    </tr>
+            <tr class="row-h">
+            <td>4. จำนวนรอกที่ใช้ &nbsp;&nbsp; (ครั้ง)</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                    </tr>
+            <tr class="row-h">
+            <td>5. จำนวนครั้งที่ติดตั้ง &nbsp;(วัน)</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                    </tr>
+    </table>
+
+<table style="margin-top:22px;">
+    <tr>
+        <td style="width:50%; padding:0 8px 0 12mm;">
+            <table class="ln"><tr><td class="l">ผู้บันทึก</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+        </td>
+        <td style="width:50%; padding:0;">
+            <table class="ln"><tr><td class="l">ผู้ตรวจสอบ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:6px 0 0 30mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</td>
+        <td style="padding:6px 0 0 18mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</td>
+    </tr>
+</table>
+
+
+<div class="form-code">F-PD-017 ฉบับที่ : 2</div></div>
+<div class="page-break" style="display:block;height:0;page-break-after:always;"></div>
+<div class="sheet">
+<div class="bold" style="margin-top:4mm;">ประเมินการปฏิบัติงานและความเห็นของแต่ละหน่วยงาน</div>
+    <div class="bold" style="">ผลิตภัณฑ์</div>
+                    <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าส่วนผลิต :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าส่วนขนส่ง :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าส่วนตัดแผ่นและดัดแปลง :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าแผนกปฏิบัติการโรงงาน :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">ผู้จัดการฝ่ายโรงงาน :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">ผู้จัดการผลิตภัณฑ์ :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                <div class="bold" style="margin-top:14px;">ปฏิบัติการ</div>
+                    <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าส่วนปฏิบัติการสนาม :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">หัวหน้าแผนกปฏิบัติการสนาม :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">ผู้จัดการฝ่ายปฏิบัติการสนาม :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+                            <table class="ln"><tr>
+            <td class="l" style="width:40mm;">ผู้จัดการปฏิบัติการ :</td>
+            <td class="l">เป้าหมาย</td><td class="v"></td>
+            <td class="gap"></td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผล</td>
+            <td class="vc" style="width:12mm;"></td><td class="l">% ผลการประเมิน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ผ่าน</td>
+            <td class="l"><span class="cb">&nbsp;</span>
+ ไม่ผ่าน</td>
+        </tr></table>
+                    <div class="line">&nbsp;</div>
+                    <div class="line">&nbsp;</div>
+            
+<table class="ln" style="margin-top:18px;"><tr>
+    <td class="l">กรรมการผู้จัดการ &nbsp;: &nbsp;สรุปผลการประเมิน</td>
+    <td class="l"><span class="cb">&nbsp;</span>
+ ดีมาก</td>
+    <td class="l"><span class="cb">&nbsp;</span>
+ ดี</td>
+    <td class="l"><span class="cb">&nbsp;</span>
+ พอใช้</td>
+    <td class="l"><span class="cb">&nbsp;</span>
+ ควรปรับปรุง</td>
+    <td></td>
+</tr></table>
+    <div class="line">&nbsp;</div>
+    <div class="line">&nbsp;</div>
+<div class="form-code">F-PD-017 ฉบับที่ : 2</div></div>
+</body>
+</html>

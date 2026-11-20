@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>F-PD-015 ใบส่งงาน</title>
+        <style>
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/THSarabunNew.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/THSarabunNew-Bold.ttf') format('truetype');
+        }
+
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 12mm 12mm;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'THSarabunNew', 'DejaVu Sans', sans-serif;
+            font-size: 15pt;
+            line-height: 0.95;
+            color: #000;
+            margin: 0;
+        }
+
+        table { border-collapse: collapse; width: 100%; }
+        td, th { vertical-align: middle; padding: 1px 3px; font-weight: normal; }
+
+        .grid td, .grid th { border: 0.7px solid #000; }
+        .grid th { text-align: center; }
+        .box { border: 1px solid #000; }
+        .box-thick { border: 1.5px solid #000; }
+        .no-border td, .no-border th { border: none; }
+
+        .title { font-size: 19pt; font-weight: bold; text-align: center; }
+        .bold { font-weight: bold; }
+        .normal { font-weight: normal; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .left { text-align: left; }
+        .small { font-size: 13.5pt; }
+        .large { font-size: 16.5pt; }
+        .xsmall { font-size: 11.5pt; }
+        .shade { background: #e6e6e6; }
+
+        /* เส้นประสำหรับกรอกข้อมูล */
+        .fill {
+            display: inline-block;
+            border-bottom: 0.8px dotted #000;
+            min-height: 14px;
+            padding: 0 2px;
+            vertical-align: bottom;
+            text-align: center;
+        }
+        .fill-left { text-align: left; }
+
+        /* บรรทัด label + ช่องกรอก: <table class="ln"><tr><td class="l">ชื่อ</td><td class="v">ค่า</td></tr></table> */
+        table.ln { width: 100%; border-collapse: collapse; }
+        table.ln td { padding: 0 2px; border: none; vertical-align: bottom; }
+        table.ln td.l { white-space: nowrap; width: 1%; padding-right: 3px; }
+        table.ln td.v { border-bottom: 0.8px dotted #000; }
+        table.ln td.vc { border-bottom: 0.8px dotted #000; text-align: center; }
+        table.ln td.gap { width: 8px; }
+        .line {
+            border-bottom: 0.8px dotted #000;
+            height: 6.8mm;
+            padding: 0 2px;
+            overflow: hidden;
+        }
+
+        /* checkbox */
+        .cb {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            font-family: 'DejaVu Sans', sans-serif;
+            font-size: 8px;
+            line-height: 9px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0 3px 0 6px;
+        }
+
+        .form-code {
+            position: fixed;
+            bottom: -7mm;
+            right: 0;
+            text-align: right;
+            font-size: 13pt;
+            margin-top: 6px;
+        }
+        .page-break { page-break-after: always; }
+        .row-h td { height: 23px; padding-top: 0; padding-bottom: 0; }
+        .row-h td.fit { font-size: 13.5pt; }
+
+            .hdr td { vertical-align: bottom; }
+    .row-h td { font-size: 12.5pt; }
+    .total-line { border-bottom: 3px double #000; display: inline-block; width: 22mm; text-align: center; }
+    </style>
+<style>
+    @media screen {
+        html { background: #6b6f76; }
+        body { margin: 0; padding: 16px 0 32px; }
+        .sheet { position: relative; width: 210mm; min-height: 297mm; padding: 10mm 12mm 12mm 12mm; margin: 0 auto 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+        .sheet .form-code { position: absolute; bottom: 4mm; right: 12mm; }
+        .bar { width: 210mm; margin: 0 auto 10px; color: #fff; font-family: sans-serif; font-size: 14px; display: flex; justify-content: space-between; }
+        .bar a { color: #fff; }
+    }
+    @media print { .bar { display: none; } .sheet .form-code { position: fixed; } }
+    .page-break { display: none; }
+</style>
+</head>
+<body>
+<div class="bar"><span>F-PD-015 — ใบส่งงาน</span><a href="index.html">← รายการฟอร์มทั้งหมด</a></div>
+<div class="sheet">
+
+
+<table style="border:1px solid #000;" class="hdr">
+    <tr><td colspan="4" class="title" style="padding-top:14px;">ใบส่งงาน</td></tr>
+    <tr>
+        <td class="bold" style="width:28%;">บริษัท วงศ์ชัย จำกัด</td>
+        <td style="width:24%;"><span class="cb">&nbsp;</span>
+ พื้นคอนกรีตรูกลวง</td>
+        <td style="width:28%;">
+            <table class="ln"><tr><td class="l"><span class="cb">&nbsp;</span>
+</td><td class="v"></td></tr></table>
+        </td>
+        <td class="right bold">หน้าที่ <span class="normal">..... / ......</span></td>
+    </tr>
+</table>
+<table style="border:1px solid #000; border-top:none;">
+    <tr>
+        <td style="width:50%; border-right:1px solid #000; padding:12px 6px 2px 6px; vertical-align:top;">
+            <table class="ln"><tr>
+                <td class="l bold">เลขที่</td><td class="vc"></td>
+                <td class="l bold">&nbsp; วันที่</td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td>
+            </tr></table>
+            <table class="ln"><tr><td class="l bold">ชื่อลูกค้า</td><td class="v"></td></tr></table>
+            <table class="ln"><tr><td class="l bold">เรียน</td><td class="v"></td></tr></table>
+        </td>
+        <td style="width:50%; padding:12px 6px 2px 6px; vertical-align:top;">
+            <table class="ln"><tr><td class="l bold">โครงการ</td><td class="v"></td></tr></table>
+            <table class="ln"><tr><td class="l bold">สถานที่</td><td class="v"></td></tr></table>
+            <div class="line">&nbsp;</div>
+        </td>
+    </tr>
+</table>
+<table class="grid" style="border:1px solid #000; border-top:none;">
+    <tr>
+        <th style="width:12%; border-top:none;">รหัสสินค้า</th>
+        <th style="width:11%; border-top:none;">ความหนา<br>(ซม.)</th>
+        <th style="width:22%; border-top:none;">น้ำหนักออกแบบ<br>(กก. / ม.<sup>2</sup>)</th>
+        <th style="width:31%; border-top:none;">จำนวน / ขนาด<br><span class="small">Strand / Wire</span></th>
+        <th style="width:10%; border-top:none;">จำนวน<br>รวม</th>
+        <th style="width:10%; border-top:none;">หน่วย</th>
+    </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+            <tr class="row-h">
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+            <td class="center"></td>
+        </tr>
+    </table>
+<table>
+    <tr>
+        <td style="width:72%;" class="right">ยอดรวม</td>
+        <td style="padding-left:8mm;"><span class="total-line">&nbsp;</span></td>
+    </tr>
+</table>
+<table class="ln" style="width:auto; margin-left:6mm;"><tr>
+    <td class="l">รายละเอียดของผลิตภัณฑ์แต่ละชนิดให้ดูในหน้า</td><td class="vc" style="width:14mm;"></td>
+    <td class="l">ถึงหน้า</td><td class="vc" style="width:14mm;"></td>
+</tr></table>
+<table class="ln" style="margin:2px 0 6px 6mm; width:97%;"><tr>
+    <td class="l">เอกสารประกอบ &nbsp;&nbsp; <span class="cb">&nbsp;</span>
+ แบบแปลนจำนวน</td>
+    <td class="vc" style="width:14mm;"></td>
+    <td class="l">แผ่น &nbsp;&nbsp; <span class="cb">&nbsp;</span>
+</td>
+    <td class="v"></td>
+</tr></table>
+
+<table style="border:1px solid #000;">
+    <tr>
+        <td style="width:62%; border-right:1px solid #000; vertical-align:top; padding:2px 6px;">
+            <div>บริษัท วงศ์ชัย จำกัด</div>
+            <table class="ln"><tr><td class="l" style="width:18mm;">ผู้จัดทำ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 18mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+            <table class="ln" style="margin-top:6px;"><tr><td class="l" style="width:18mm;">ผู้ตรวจสอบ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 18mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        </td>
+        <td style="width:38%; vertical-align:top; padding:2px 6px;">
+            <div>ตัวแทนลูกค้า</div>
+            <table class="ln"><tr><td class="l" style="width:14mm;">ผู้อนุมัติ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 8mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+            <table class="ln" style="margin-top:6px;"><tr><td class="l" style="width:14mm;"></td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 8mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        </td>
+    </tr>
+</table>
+<div class="small" style="padding-left:6px;">กรุณาลงชื่อและสกุลตัวบรรจงใน ( )</div>
+
+
+    <div class="form-code">F-PD-015 ฉบับที่ : 1</div></div>
+<div class="page-break" style="display:block;height:0;page-break-after:always;"></div>
+<div class="sheet">
+    <div class="right small">(ส่วนที่ 2)</div>
+    <div style="border:1px solid #000; padding:10px 8px 2px 8px;">
+        <table class="ln"><tr>
+            <td class="l bold">เลขที่</td><td class="vc" style="width:26mm;"></td>
+            <td class="l bold">&nbsp; วันที่</td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td>
+            <td></td>
+            <td class="l bold">หน้าที่</td><td class="l">..... / ......</td>
+        </tr></table>
+        <table class="ln" style="width:60%;"><tr><td class="l bold">โครงการ</td><td class="v"></td></tr></table>
+    </div>
+    <table style="border:1px solid #000; border-top:none;">
+        <tr>
+                            <td style="width:48%; padding:2px 4px; vertical-align:top; border-right:1px solid #000;">
+                    <table class="small">
+                        <tr>
+                            <td class="center" style="padding:0;">รหัสสินค้า</td>
+                            <td class="center" style="padding:0;">ความหนา</td>
+                            <td class="center" style="padding:0;">น้ำหนักออกแบบ<br>(กก. / ม.<sup>2</sup>)</td>
+                            <td class="center" style="padding:0;">จำนวน / ขนาด<br>(wire / strand)</td>
+                        </tr>
+                        <tr>
+                            <td class="center" style="border-bottom:0.8px dotted #000;">&nbsp;</td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                        </tr>
+                    </table>
+                </td>
+                                    <td style="width:4%;"></td>
+                                            <td style="width:48%; padding:2px 4px; vertical-align:top; border-left:1px solid #000;">
+                    <table class="small">
+                        <tr>
+                            <td class="center" style="padding:0;">รหัสสินค้า</td>
+                            <td class="center" style="padding:0;">ความหนา</td>
+                            <td class="center" style="padding:0;">น้ำหนักออกแบบ<br>(กก. / ม.<sup>2</sup>)</td>
+                            <td class="center" style="padding:0;">จำนวน / ขนาด<br>(wire / strand)</td>
+                        </tr>
+                        <tr>
+                            <td class="center" style="border-bottom:0.8px dotted #000;">&nbsp;</td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                            <td class="center" style="border-bottom:0.8px dotted #000;"></td>
+                        </tr>
+                    </table>
+                </td>
+                                    </tr>
+    </table>
+
+    <table style="margin-top:8px;">
+        <tr>
+                                            <td style="width:48%; padding:0; vertical-align:top;">
+                    <table class="grid">
+                        <tr>
+                            <th style="width:20%;">code</th>
+                            <th style="width:44%;">ขนาด (เมตร)</th>
+                            <th style="width:18%;">จำนวน<br><span class="xsmall">(แผ่น /ตัว)</span></th>
+                            <th style="width:18%;">ปริมาณ<br>(        )</th>
+                        </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                            </table>
+                    <table class="ln" style="width:60%; margin-left:auto; margin-right:20%;"><tr>
+                        <td class="l">ยอดรวม (1)</td><td class="vc"></td>
+                    </tr></table>
+                </td>
+                                    <td style="width:4%;"></td>
+                                                            <td style="width:48%; padding:0; vertical-align:top;">
+                    <table class="grid">
+                        <tr>
+                            <th style="width:20%;">code</th>
+                            <th style="width:44%;">ขนาด (เมตร)</th>
+                            <th style="width:18%;">จำนวน<br><span class="xsmall">(แผ่น /ตัว)</span></th>
+                            <th style="width:18%;">ปริมาณ<br>(        )</th>
+                        </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                                    <tr class="row-h">
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                                            </table>
+                    <table class="ln" style="width:60%; margin-left:auto; margin-right:0;"><tr>
+                        <td class="l">ยอดรวม (2)</td><td class="vc"></td>
+                    </tr></table>
+                </td>
+                                    </tr>
+    </table>
+    <div class="right">ยอดรวม (1)+ (2) <span class="total-line">&nbsp;</span></div>
+
+    <table class="ln"><tr><td class="l">หมายเหตุ :</td><td class="v"></td></tr></table>
+    <div class="line">&nbsp;</div>
+    <div class="small" style="padding-left:6mm; margin-bottom:2px;">กรณีที่ลูกค้ารับของที่โรงงานหรือติดตั้งเอง ให้ระบุเลขที่ใบส่งของในช่องหมายเหตุ</div>
+
+    <table style="border:1px solid #000;">
+    <tr>
+        <td style="width:62%; border-right:1px solid #000; vertical-align:top; padding:2px 6px;">
+            <div>บริษัท วงศ์ชัย จำกัด</div>
+            <table class="ln"><tr><td class="l" style="width:18mm;">ผู้จัดทำ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 18mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+            <table class="ln" style="margin-top:6px;"><tr><td class="l" style="width:18mm;">ผู้ตรวจสอบ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 18mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        </td>
+        <td style="width:38%; vertical-align:top; padding:2px 6px;">
+            <div>ตัวแทนลูกค้า</div>
+            <table class="ln"><tr><td class="l" style="width:14mm;">ผู้อนุมัติ</td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 8mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+            <table class="ln" style="margin-top:6px;"><tr><td class="l" style="width:14mm;"></td><td class="vc"></td><td class="gap"></td><td class="l"><span style="white-space: nowrap;">......../......../........</span>
+</td></tr></table>
+            <div style="padding:3px 0 0 8mm;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        </td>
+    </tr>
+</table>
+<div class="small" style="padding-left:6px;">กรุณาลงชื่อและสกุลตัวบรรจงใน ( )</div>
+<div class="form-code">F-PD-015 ฉบับที่ : 1</div></div>
+</body>
+</html>
